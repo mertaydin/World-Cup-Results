@@ -99,7 +99,7 @@ for($i=1; $i<=$size; $i++)
   $array = $groups[$i];
   $array_size = count($array);
 
-  for($j=0; $j<4; $j++)
+  for($j=0; $j<$array_size; $j++)
   {
     $_group[$i][$j] = $array[$j];   
   } 
