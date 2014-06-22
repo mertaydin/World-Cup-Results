@@ -130,7 +130,7 @@ $groups = $_group;
       <?php foreach ($group as $_index => $team) {     ?>
           <tr>
         <th class="tg-031e"><?php echo $group_letters[$team['group_id']-1] ?></th>
-        <th class="tg-031e"><?php echo '<a href="takim.php?code='. $team['fifa_code'] .'" target="_blank">' . $team['country'] . '</a>' ?></th>
+        <th class="tg-031e"><?php echo '<a href="team.php?code='. $team['fifa_code'] .'" target="_blank">' . $team['country'] . '</a>' ?></th>
         <!--<th class="tg-031e"><?php echo $team['fifa_code'] ?></th>-->
         <th class="tg-031e"><?php echo $team['wins'] ?></th>
         <th class="tg-031e"><?php echo $team['draws'] ?></th>

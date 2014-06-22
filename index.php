@@ -32,7 +32,7 @@ $group_results_url = "http://worldcup.sfg.io/group_results";
 
 <div class="box-container">
     <div class="box">
-      <a href="gunun-maclari.php" target="_blank">
+      <a href="today_matches.php" target="_blank">
         GÜNÜN MAÇLARI
       </a>
     </div>
@@ -40,7 +40,7 @@ $group_results_url = "http://worldcup.sfg.io/group_results";
   <div class="seperator"></div>
 
     <div class="box">
-      <a href="gruplar.php" target="_blank">
+      <a href="groups.php" target="_blank">
         GRUPLAR
       </a>
     </div>

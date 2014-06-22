@@ -87,8 +87,8 @@ $group_results_url = "http://worldcup.sfg.io/group_results";
     <th class="tg-031e"><?php echo $match->location ?></th>
     <th class="tg-031e"><?php echo date("d-m-Y H:i", strtotime($match->datetime)) ?></th>
     <th class="tg-031e"><?php echo $status ?></th>
-    <th class="tg-031e"><?php echo '<a href="takim.php?code='. $match->home_team->code .'">'.$match->home_team->country.'</a>' ?></th>
-    <th class="tg-031e"><?php echo '<a href="takim.php?code='. $match->away_team->code .'">'.$match->away_team->country.'</a>' ?></th>
+    <th class="tg-031e"><?php echo '<a href="team.php?code='. $match->home_team->code .'">'.$match->home_team->country.'</a>' ?></th>
+    <th class="tg-031e"><?php echo '<a href="team.php?code='. $match->away_team->code .'">'.$match->away_team->country.'</a>' ?></th>
     <th class="tg-031e"><?php echo $winner ?></th>
     <th class="tg-031e"><?php echo $match->status!="future" ? $match->home_team->goals . ' - ' . $match->away_team->goals : 'Maç Başlamadı.' ?></th>
   </tr> 
