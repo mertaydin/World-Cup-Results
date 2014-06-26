@@ -1,13 +1,16 @@
 <?php
-$cachedosyasi = "cache/".md5($_SERVER['REQUEST_URI']).".mrt";
+include "functions.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
+$cachedosyasi = "cache/".date('dmY_His') . '_' . convertToSef($_SERVER['REQUEST_URI']).".mrt";
 if (file_exists($cachedosyasi) && (time() - 180 < filemtime($cachedosyasi))) {
 include($cachedosyasi);
 exit;
 }
 ob_start();
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 date_default_timezone_set('Europe/Istanbul');
 
