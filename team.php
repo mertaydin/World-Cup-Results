@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
-$cachedosyasi = "cache/".date('dmY_His') . '_' . convertToSef($_SERVER['REQUEST_URI']).".mrt";
+$cachedosyasi = "cache/".convertToSef($_SERVER['REQUEST_URI']).".mrt";
 if (file_exists($cachedosyasi) && (time() - 180 < filemtime($cachedosyasi))) {
 include($cachedosyasi);
 exit;
@@ -22,17 +22,27 @@ $group_results_url = "http://worldcup.sfg.io/group_results";
 //http://worldcup.sfg.io/matches/today/?by_date=DESC
 
 
-
+include 'teams_array.php';
 
 ?>
 
 <?php $matches = json_decode(file_get_contents($fifa_codes_url.$_GET['code'])); ?>
+<?
+$team_name="";
+foreach ($teams_array as $team) 
+{
+	if($_GET['code']==$team['fifa_code'])	
+	{
+		$team_name = $team['country'];
+	}
+}
+?>
 
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>2014 Dünya Kupası <?php echo strval($_GET['code']) ?> İstatistikleri - www.kodteyner.com</title>
+    <title>2014 Dünya Kupası <?php echo $team_name; ?> İstatistikleri - www.kodteyner.com</title>
  
 
 </head>
