@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
-$cachedosyasi = "cache/".date('dmY_His') . '_' . convertToSef($_SERVER['REQUEST_URI']).".mrt";
+$cachedosyasi = "cache/".convertToSef($_SERVER['REQUEST_URI']).".mrt";
 if (file_exists($cachedosyasi) && (time() - 180 < filemtime($cachedosyasi))) {
 include($cachedosyasi);
 exit;
